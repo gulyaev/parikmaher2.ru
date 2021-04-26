@@ -60,11 +60,11 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1
   },
   cardGrid: {
-    marginTop: theme.spacing(4)
+    marginTop: theme.spacing(12)
   }
 }));
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function App() {
 
@@ -92,8 +92,9 @@ function App() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            Парикмахер в Калининграде
+            Парикмахер Калининград
           </Typography>
+          {/*
           <Box>
             <Button className={classes.menuButton} color="inherit" variant="outlined" onClick={handleClickOpen}>Login</Button>
 
@@ -126,11 +127,13 @@ function App() {
             </Dialog>
           </Box>
           <Button className={classes.menuButton} color="secondary" variant="contained">Sign Up</Button>
+          */}
         </Toolbar>
       </Container>
     </AppBar>
 
     <main>
+      {/*
       <Paper className={classes.mainFeaturesPost}
         style={{ backgroundImage: 'url(https://source.unsplash.com/random)' }}>
         <Container fixed>
@@ -161,6 +164,7 @@ function App() {
           </Grid>
         </Container>
       </Paper>
+      
       <div className={classes.mainContent}>
         <Container maxWidth="md">
           <Typography
@@ -193,7 +197,7 @@ function App() {
           </div>
         </Container>
       </div>
-
+        */}
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
           {cards.map((card) => (
@@ -208,10 +212,10 @@ function App() {
                   <Typography
                     variant="h5"
                     gutterBottom>
-                    Вот Вы создали
+                    Lorem ipsum dolor
                   </Typography>
                   <Typography>
-                    Вот Вы создали. Вот Вы создали. Вот Вы создали.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
                   </Typography>
                 </CardContent>
                 <CardActions>
@@ -224,38 +228,6 @@ function App() {
               </Card>
             </Grid>
           ))}
-        </Grid>
-      </Container>
-
-
-      <Container className={classes.cardGrid} maxWidth="md">
-        <Grid container spacing={4}>
-            <Grid item xs={12} sm={6} md={4}>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image="/images/Вероника_Кравченко.png"
-                  title="Image Title"
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography
-                    variant="h5"
-                    gutterBottom>
-                    Вот Вы создали
-                  </Typography>
-                  <Typography>
-                    Вот Вы создали. Вот Вы создали. Вот Вы создали.
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">View</Button>
-                  <Button size="small" color="primary">Edit</Button>
-
-                  <LayerIcon />
-                  <PlayCircleFilledIcon />
-                </CardActions>
-              </Card>
-            </Grid>
         </Grid>
       </Container>
     </main>
